@@ -130,8 +130,6 @@ Three separate mechanisms — mixing them up causes false fixes:
 | LangChain / LangGraph | [frameworks.md](frameworks.md) — what LC helps vs what you still own |
 | Custom agent loop + SSE UI | Map your files to the pipeline diagram above; add `examples/your-project.md` |
 
-Example project walkthrough (Proteina-Complexa): [examples/proteina-complexa.md](examples/proteina-complexa.md)
-
 ## Anti-patterns
 
 | Do not | Why |
