@@ -1,0 +1,24 @@
+---
+description: Prefer root-cause fixes over patches and post-hoc cleanup in any task.
+alwaysApply: true
+---
+
+# No Patches - Root-Cause Fixes Only
+
+When something breaks or behaves wrong, fix the **source** (state model, prompt scope, persistence, tool policy). Do not paper over symptoms.
+
+## Avoid
+
+- Keyword/regex routing when the agent or UI already has conversation history and session state.
+- Dedupe, strip, trim, or merge logic whose job is to hide duplicate or wrong model output.
+- Forced tool calls or special-case branches that compensate for unclear prompts or missing context.
+- One-off examples or phrase lists embedded in prompts or code paths.
+
+## Prefer
+
+- **Facts over inference rules**: inject what the system knows; let the model or UI interpret the transcript.
+- **Structural constraints**: disable tools, phases, or code paths that should not run - not "please don't" in prose.
+- **Single ownership**: each artifact (plan, summary, segment) is produced once in the right layer; align server persistence with client rendering.
+- **Prompt scope**: if output is wrong or repeated, tighten role and phase boundaries (see `concise-agent-prompts` skill).
+
+If a fix only works for one utterance, one screen, or one failure mode, redesign instead of extending the patch.

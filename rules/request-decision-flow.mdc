@@ -1,0 +1,38 @@
+---
+description: Default decision flow for non-trivial requests - grill-me/brainstorming and AskQuestion before implementation
+alwaysApply: true
+---
+
+# Request Decision Flow
+
+**Default:** follow this workflow for every user request **unless** it is clearly trivial or the solution is very deterministic. Do not try to judge whether a request is "complex" - when in doubt, apply this rule.
+
+## When to skip this rule
+
+Skip only when **both** are true:
+
+1. **Trivial problem** - a single, obvious change with no meaningful trade-offs (typo fix, rename, one-line config tweak, pure explanation of existing code, "run this command").
+2. **Very deterministic solution** - exactly one correct approach; no real design choice (user already named the approach, or codebase convention leaves no alternative).
+
+If either condition is unclear, **do not skip**.
+
+## Skill-first routing
+
+Before implementation, pick the right skill:
+
+- **Requirements unclear, many constraints, or high-impact decisions** -> call the `grill-me` skill first and clarify with the user.
+- **Design / exploration / discovery** (architecture, new feature shape, trade-off analysis) -> call the `brainstorming` skill first to widen and structure the solution space.
+
+When unsure which skill fits, prefer `grill-me` for execution-bound tasks and `brainstorming` for open-ended design.
+
+## Multi-solution decision gate
+
+If there are **multiple valid approaches** that could satisfy the requirement, call the `AskQuestion` tool and present clear options **before** implementation.
+
+- Put the recommended option first and mark it as recommended.
+- Do not bypass this step unless the user has already explicitly chosen an approach.
+
+## Scope control
+
+- Keep options focused on the same user goal; do not expand into unrelated refactors.
+- After user selection, execute decisively on the chosen path.

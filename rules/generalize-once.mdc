@@ -1,0 +1,31 @@
+---
+description: Generalize the user's request - fix the whole pattern in one pass, not one instance
+alwaysApply: true
+---
+
+# Generalize Once, Fix Completely
+
+When the user points out **one** problem, treat it as a **class** of problems. Deliver the full fix before they have to ask again for siblings.
+
+## Infer the real ask
+
+- What **category** is this? (dead code, redundant config, duplicated logic, stale docs, missing validation, ...)
+- What **scope** does it naturally cover? (same file, same module, same pattern across repo)
+- What would the user likely ask **next** if you only patch the single line they highlighted?
+
+Answer those three, then fix that scope - not just the cited line.
+
+## One-pass workflow
+
+1. **Search the pattern** - grep / explore for the same smell elsewhere (sibling fields, parallel files, mirrored stubs, outdated docs).
+2. **Fix source + consumers together** - config, loader, API, UI, tests, docs that reference the same thing; don't leave orphans on either side.
+3. **Close the loop** - quick sanity check that nothing still references what you removed or duplicates what you consolidated.
+
+## Stop conditions
+
+- Do **not** expand into unrelated refactors or features the user didn't imply.
+- Do **not** ask "should I also fix X?" for obvious siblings in the same class - just fix them and mention what you included in the summary.
+
+## Communication
+
+Briefly state what pattern you generalized (one sentence) and what else you fixed in the same pass, so the user sees they won't need to repeat themselves.

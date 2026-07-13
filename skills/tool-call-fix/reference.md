@@ -1,6 +1,6 @@
-# Tool Call Fix — Reference
+# Tool Call Fix - Reference
 
-Generic failure-mode catalog (A–H). For stack-specific notes see [frameworks.md](frameworks.md).
+Generic failure-mode catalog (A-H). For stack-specific notes see [frameworks.md](frameworks.md). For a full project walkthrough see [examples/proteina-complexa.md](examples/proteina-complexa.md).
 
 ## Failure mode map (A–H)
 
