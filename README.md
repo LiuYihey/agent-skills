@@ -24,6 +24,7 @@ npx skills add LiuYihey/Agent-Engineering --skill agent-engineering
 npx skills add LiuYihey/Agent-Engineering --skill concise-agent-prompts
 npx skills add LiuYihey/Agent-Engineering --skill hero-motion-sync-ux
 npx skills add LiuYihey/Agent-Engineering --skill tool-call-fix
+npx skills add LiuYihey/Agent-Engineering --skill agent-shell-navigation-ux
 ```
 
 Works with Cursor, Claude Code, Codex, Gemini CLI, GitHub Copilot, and 35+
@@ -37,6 +38,7 @@ other agents.
 | [concise-agent-prompts](https://skills.sh/LiuYihey/Agent-Engineering/concise-agent-prompts) | Universal principles for writing agent prompt templates in multi-agent pipelines: role separation, scope steering, anti-patterns, and iterative review flows. |
 | [hero-motion-sync-ux](https://skills.sh/LiuYihey/Agent-Engineering/hero-motion-sync-ux) | Sync hero text and molecule motion using one cadence, one timeline, and no flicker/blank-frame artifacts. |
 | [tool-call-fix](https://skills.sh/LiuYihey/Agent-Engineering/tool-call-fix) | Diagnose and fix agent tool-call failures: prose promises a tool but nothing runs, `tool_calls=0`, wrong tool, empty payload, streaming UI lag, thinking round-trip loss, or cross-turn transcript amnesia. |
+| [agent-shell-navigation-ux](https://skills.sh/LiuYihey/Agent-Engineering/agent-shell-navigation-ux) | Preserve agent transcript scroll across app page changes, and give async actions instant press feedback plus in-flight state for agent-side-chat product shells. |
 
 ## Use Rules Manually
 
@@ -69,6 +71,9 @@ description and let the agent load it when appropriate.
 skills/   # installable skill packages for npx skills add
 rules/    # reusable Cursor rule files to copy manually
 ```
+
+When this repo is checked out as a project's `.cursor/` directory, those paths
+are `.cursor/skills/` and `.cursor/rules/` relative to the project root.
 
 ## License
 
