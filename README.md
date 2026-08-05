@@ -4,7 +4,8 @@ Installable agent skills plus reusable Cursor rules for building and debugging
 LLM agents with tools, streaming UI, and multi-turn sessions.
 
 This repo was previously published as `LiuYihey/agent-skills`. The current repo
-slug is `LiuYihey/Agent-Engineering`.
+slug is `LiuYihey/Agent-Engineering`. GitHub 301-redirects the old name; install
+from the new slug only.
 
 ## Install Skills
 
@@ -32,13 +33,21 @@ other agents.
 
 ## Published Skills
 
+Browse the sources on GitHub (canonical until skills.sh detail pages are
+stable). skills.sh lowercases the owner/repo to
+[`liuyihey/agent-engineering`](https://skills.sh/liuyihey/agent-engineering);
+that directory page lists all five skills, but individual skill URLs can still
+404 while snapshots catch up. Prefer the install commands above over old
+`LiuYihey/agent-skills` listings, which still appear on skills.sh with only two
+skills.
+
 | Skill | Description |
 |-------|-------------|
-| [agent-engineering](https://skills.sh/LiuYihey/Agent-Engineering/agent-engineering) | Production-hardened practices for building, debugging, and optimizing LLM agents with tools, streaming UI, and multi-turn sessions. |
-| [concise-agent-prompts](https://skills.sh/LiuYihey/Agent-Engineering/concise-agent-prompts) | Universal principles for writing agent prompt templates in multi-agent pipelines: role separation, scope steering, anti-patterns, and iterative review flows. |
-| [hero-motion-sync-ux](https://skills.sh/LiuYihey/Agent-Engineering/hero-motion-sync-ux) | Sync hero text and molecule motion using one cadence, one timeline, and no flicker/blank-frame artifacts. |
-| [tool-call-fix](https://skills.sh/LiuYihey/Agent-Engineering/tool-call-fix) | Diagnose and fix agent tool-call failures: prose promises a tool but nothing runs, `tool_calls=0`, wrong tool, empty payload, streaming UI lag, thinking round-trip loss, or cross-turn transcript amnesia. |
-| [agent-shell-navigation-ux](https://skills.sh/LiuYihey/Agent-Engineering/agent-shell-navigation-ux) | Preserve agent transcript scroll across app page changes, and give async actions instant press feedback plus in-flight state for agent-side-chat product shells. |
+| [agent-engineering](https://github.com/LiuYihey/Agent-Engineering/tree/main/skills/agent-engineering) | Production-hardened practices for building, debugging, and optimizing LLM agents with tools, streaming UI, and multi-turn sessions. |
+| [concise-agent-prompts](https://github.com/LiuYihey/Agent-Engineering/tree/main/skills/concise-agent-prompts) | Universal principles for writing agent prompt templates in multi-agent pipelines: role separation, scope steering, anti-patterns, and iterative review flows. |
+| [hero-motion-sync-ux](https://github.com/LiuYihey/Agent-Engineering/tree/main/skills/hero-motion-sync-ux) | Sync hero text and molecule motion using one cadence, one timeline, and no flicker/blank-frame artifacts. |
+| [tool-call-fix](https://github.com/LiuYihey/Agent-Engineering/tree/main/skills/tool-call-fix) | Diagnose and fix agent tool-call failures: prose promises a tool but nothing runs, `tool_calls=0`, wrong tool, empty payload, streaming UI lag, thinking round-trip loss, or cross-turn transcript amnesia. |
+| [agent-shell-navigation-ux](https://github.com/LiuYihey/Agent-Engineering/tree/main/skills/agent-shell-navigation-ux) | Preserve agent transcript scroll across app page changes, and give async actions instant press feedback plus in-flight state for agent-side-chat product shells. |
 
 ## Use Rules Manually
 
